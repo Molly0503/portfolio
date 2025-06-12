@@ -1,0 +1,91 @@
+@use "../global"as g;
+
+/*!
+layout > header
+------------------------------
+*/
+
+.l-header {
+  position: fixed;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 66px;
+  background-color: var(--c-main);
+  box-shadow: 5px 5px 10px 5px var(--c-sub);
+  color: var(--c-white);
+  padding-inline: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+
+  @include g.mq() {
+    height: 80px;
+    padding-inline: 40px;
+  }
+
+  &__title {
+    line-height: 1;
+    @include g.rem(24);
+    font-family: var(--ff-en);
+    font-weight: 700;
+  }
+
+  i {
+    color: var(--c-white);
+  }
+
+  &__menu-list {
+    font-weight: bold;
+    line-height: 1;
+    display: flex;
+    column-gap: 36px;
+    @include g.rem(15);
+  }
+}
+
+.hamburger {
+  &-menu {
+    @include g.mq(sp) {
+      position: fixed;
+      top: 88px;
+      left: 100%;
+      background-color: var(--c-main);
+      border-radius: 16px;
+      box-shadow: 5px 5px 10px 5px var(--c-sub);
+      padding: 48px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .6s;
+    }
+
+    &-active {
+      @include g.mq(sp) {
+        left: 10px;
+        right: 10px;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &-list {
+      @include g.mq(sp) {
+        flex-direction: column;
+        @include g.rem(18);
+        row-gap: 42px;
+      }
+    }
+  }
+
+  &-bottom {
+    @include g.mq() {
+      display: none;
+    }
+  }
+}

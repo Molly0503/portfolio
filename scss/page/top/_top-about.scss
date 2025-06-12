@@ -1,0 +1,98 @@
+@use "../../global"as g;
+
+
+.top-about {
+  background-color: var(--c-white);
+
+  .st>.nav {
+    flex-direction: row !important;
+    column-gap: 8px;
+    font-family: var(--ff-en);
+
+    @include g.mq() {
+      column-gap: 16px;
+    }
+  }
+
+  .st-theme-basic {
+    border: none;
+    background: none;
+
+    &>.nav {
+      box-shadow: none;
+
+      & .nav-link {
+        border-radius: 16px 16px 0 0;
+        color: var(--c-f-main);
+        background-color: var(--c-sub-right);
+        @include g.rem(18);
+        font-weight: bold;
+        padding-block: 16px;
+        line-height: 1;
+
+        @include g.mq() {
+          @include g.rem(26);
+          padding-block: 24px;
+        }
+
+        &::after {
+          content: none;
+        }
+
+        &.active {
+          color: var(--c-white) !important;
+          background-color: var(--c-main);
+        }
+      }
+    }
+  }
+
+  .st>.tab-content {
+    overflow: visible;
+
+    .tab {
+      &-pane {
+        background-color: rgb(from var(--c-bg-main) r g b / .3);
+        padding: 16px;
+        border-radius: 0 0 16px 16px;
+        border-top: var(--c-main) 10px solid;
+
+        @include g.mq() {
+          padding: 24px;
+        }
+      }
+
+      &-inner {
+        background-color: var(--c-white);
+        padding: 24px;
+        border-radius: 16px;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 36px;
+        @include g.rem(14);
+
+        @include g.mq() {
+          grid-template-columns: auto 1fr;
+          column-gap: 24px;
+          @include g.rem(16);
+        }
+      }
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+      border-radius: 50%;
+      margin-inline: auto;
+    }
+  }
+
+  &__text {
+    display: grid;
+    gap: 8px;
+
+    .en {
+      font-family: var(--ff-en);
+    }
+  }
+}

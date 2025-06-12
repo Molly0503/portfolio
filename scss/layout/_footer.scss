@@ -1,0 +1,29 @@
+@use "../global" as g;
+
+/*!
+layout > footer
+------------------------------
+*/
+
+.l-footer {
+  text-align: center;
+  font-family: var(--ff-en);
+  background-color: var(--c-bg-footer);
+  @include g.rem(12);
+  color: var(--c-copyright);
+  text-transform: uppercase;
+}
+
+.back-to-top {
+  background-color: var(--c-sub);
+  text-align: center;
+  padding-block: .5rem;
+}
+
+.page-top {
+  color: var(--c-white);
+
+  &:hover {
+    color: var(--c-black);
+  }
+}

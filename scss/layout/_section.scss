@@ -1,0 +1,24 @@
+@use "../global"as g;
+
+/*!
+layout > section
+------------------------------
+*/
+
+.l-section {
+  padding: 80px 16px;
+  background-color: rgb(from var(--c-bg-main) r g b / .3);
+
+  @include g.mq() {
+    padding-block: 110px 95px;
+  }
+
+  &--narrowPb {
+    padding-block: 32px;
+
+    @include g.mq() {
+      padding-block: 40px;
+    }
+  }
+
+}

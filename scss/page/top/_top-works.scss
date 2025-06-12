@@ -1,0 +1,76 @@
+@use "../../global" as g;
+
+.top-works {
+
+  &__item {
+    padding: 25px;
+    
+    @include g.mq() {
+      padding: 50px;
+    }
+  }
+  
+  img {
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px 0 var(--c-sub);
+    position: relative;
+    margin-inline: auto;
+
+    @include g.mq() {
+      border-radius: 25px;
+    }
+  }
+
+  &__catch {
+    position: absolute;
+    right: 0;
+    bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 8px;
+
+    @include g.mq() {
+      bottom: 70px;
+    }
+  }
+
+  &__text {
+    background-color: rgb(from var(--c-main) r g b / .9);
+    padding-inline: 16px;
+    padding-block: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 8px;
+    color: var(--c-white);
+    line-height: 1.2;
+
+    @include g.mq() {
+      padding-inline: 24px;
+      @include g.rem(24);
+    }
+
+    &--right {
+      align-items: flex-end;
+    }
+
+    .small {
+      @include g.rem(12);
+    }
+
+    a {
+      text-decoration: underline
+    }
+  }
+
+  &__bottom {
+    @include g.rem(18);
+
+    @include g.mq() {
+      @include g.rem(30);
+    }
+  }
+}

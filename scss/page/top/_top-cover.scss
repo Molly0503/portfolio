@@ -1,0 +1,43 @@
+@use "../../global"as g;
+
+
+.top-cover {
+  background-color: var(--c-white);
+  height: 80vh;
+  @include g.rem(14);
+  text-transform: uppercase;
+
+  @include g.mq() {
+    height: 100vh;
+    @include g.rem(16);
+  }
+
+  .l-container {
+    height: 100%;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    gap: 32px;
+  }
+
+  &__title {
+    letter-spacing: .3em;
+    color: var(--c-main);
+    font-size: clamp(28px, 3.4vw, 48px);
+    font-weight: 700;
+  }
+
+  &__catch {
+    display: block;
+    @include g.rem(16);
+  }
+
+  .js-fadein {
+    opacity: 0;
+    transition: all 5s;
+
+    &-show {
+      opacity: 1;
+    }
+  }
+}

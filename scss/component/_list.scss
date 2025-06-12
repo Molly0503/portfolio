@@ -1,0 +1,17 @@
+@use "../global" as g;
+
+/*!
+component > list
+------------------------------
+*/
+
+.sns-list {
+  display: flex;
+  column-gap: 40px;
+  justify-content: center;
+
+  .bi {
+    @include g.rem(36);
+    line-height: 1;
+  }
+}
