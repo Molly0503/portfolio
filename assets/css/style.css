@@ -29,7 +29,8 @@ ul {
 
 .sns-list {
   display: flex;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   justify-content: center;
 }
 .sns-list .bi {
@@ -42,7 +43,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 12px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
   margin-bottom: 32px;
   font-family: "Raleway", sans-serif;
 }
@@ -156,7 +158,8 @@ h2::before, h2::after {
 @media screen and (min-width: 768px) {
   .header-menu-list {
     flex-direction: row;
-    column-gap: 36px;
+    -moz-column-gap: 36px;
+         column-gap: 36px;
     font-size: 0.9375rem;
   }
 }
@@ -266,6 +269,7 @@ h2::before, h2::after {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 8px;
   color: #fff;
@@ -319,13 +323,14 @@ h2::before, h2::after {
   cursor: pointer;
   background-color: #fff;
   display: flex;
-  column-gap: 16px;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
   font-weight: 500;
 }
 .skill .accordion-title p::after {
   content: "\f282";
   font-family: "bootstrap-icons";
-  background-color: #b0c9c9;
+  background-color: rgb(175.5357142857, 200.9642857143, 200.9642857143);
   border-radius: 50%;
   color: #fff;
   line-height: 1;
@@ -356,12 +361,14 @@ h2::before, h2::after {
 
 .about .st > .nav {
   flex-direction: row !important;
-  column-gap: 8px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
   font-family: "Raleway", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .about .st > .nav {
-    column-gap: 16px;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
   }
 }
 .about .st-theme-basic {
@@ -420,7 +427,8 @@ h2::before, h2::after {
 @media screen and (min-width: 768px) {
   .about .st > .tab-content .tab-inner {
     grid-template-columns: auto 1fr;
-    column-gap: 24px;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
     font-size: 1rem;
   }
 }
